@@ -1,0 +1,24 @@
+{% extends "template_base.html" %}
+
+{% block title %}Agregar Producto{% endblock %}
+
+{% block header %}Agregar Nuevo Producto{% endblock %}
+
+{% block content %}
+    <form action="{{ url_for('agregar_producto') }}" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="categoria">Categoría:</label><br>
+        <input type="text" id="categoria" name="categoria" required><br><br>
+
+        <label for="precio">Precio:</label><br>
+        <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+
+        <button type="submit">Agregar Producto</button>
+    </form>
+{% endblock %}
+
+{% block footer %}
+    &copy; 2024 Mi Aplicación Flask
+{% endblock %}

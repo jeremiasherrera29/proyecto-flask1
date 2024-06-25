@@ -1,0 +1,30 @@
+{% extends "template_base.html" %}
+
+{% block title %}Lista de Productos{% endblock %}
+
+{% block header %}Lista de Productos{% endblock %}
+
+{% block content %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+            <tr>
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.categoria }}</td>
+                <td>{{ producto.precio }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block footer %}
+    &copy; 2024 Mi Aplicación Flask
+{% endblock %}
